@@ -1,0 +1,13 @@
+{
+  "name": "travis-exec",
+  "version": "2019.02.26",
+  "description": "execute command for every travis repo",
+  "keywords": [
+    "travis"
+  ],
+  "homepage": "https://github.com/looking-for-a-job/travis-exec",
+  "license": "Unlicense",
+  "bin": {
+    "travis-exec": "./scripts/travis-exec"
+  }
+}

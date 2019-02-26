@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+{ set +x; } 2>/dev/null
+
+usage() {
+    echo "usage: $(basename $0) args ..." 1>&2
+    [[ $1 == "-h" ]] || [[ $1 == "--help" ]]; exit
+}
+
+[[ $1 == "-h" ]] || [[ $1 == "--help" ]] && usage "$@"
+
+args_count="$#"
+repos="$(travis repos -a)" || exit
+[[ -n "$repos" ]] && while IFS= read repo; do
+    args_i=1
+    while [[ $args_i -le $args_count ]]; do
+        value=${!args_i}
+        value="${value//\{\}/$repo}" # replace {} with reponame
+        set -- "$@" "$value"
+        ((args_i++))
+    done
+    "${@:args_count+1}" || exit  # exec
+    set -- "${@:1:args_count}"   # restore arguments
+done <<< "$repos";:
+
