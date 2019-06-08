@@ -1,5 +1,6 @@
 <!--
 https://pypi.org/project/readme-generator/
+https://pypi.org/project/python-readme-generator/
 -->
 
 [![](https://img.shields.io/badge/OS-Unix-blue.svg?longCache=True)]()
@@ -18,7 +19,7 @@ $ [sudo] pip install travis-exec
 #### Features
 +   `{}` replaced with repo name
 
-#### CLI
+#### Scripts usage
 ```bash
 usage: travis-exec args ...
 ```
@@ -37,5 +38,5 @@ $ travis-exec python -m travis_env.set {} WEBHOOK_URL "$WEBHOOK_URL"
 +   [`travis-exec` - execute command for all travis repos](https://pypi.org/project/travis-exec/)
 
 <p align="center">
-    <a href="https://pypi.org/project/readme-generator/">readme-generator</a>
+    <a href="https://pypi.org/project/python-readme-generator/">python-readme-generator</a>
 </p>
