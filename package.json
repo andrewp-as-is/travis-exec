@@ -1,6 +1,6 @@
 {
   "name": "travis-exec",
-  "version": "2019.4.13",
+  "version": "2020.12.3",
   "description": "execute command for every travis repo",
   "keywords": [
     "travis"
